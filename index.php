@@ -44,7 +44,7 @@
 </section>
 <header id="pageheader">
 <h1>
-silver<span>blog</span>
+fred<span>food</span>
 </h1>
 <div id="search">
 
@@ -73,16 +73,17 @@ silver<span>blog</span>
 
   <img src="images/img1.jpg" width="204" height="128" alt="img1"></div>
   <div class="fttxt">
-  <h3>Hello</h3>
-  <p> My CPSC350 blog </p>
+  <h3>Log In</h3>
+  <p> login stuff here </p>
   </div>
   </div>
 </section>
 <div id="leftcontainer">
 <h2 class="mainheading">
-Latest from the blog
+News
 
 </h2>
+<p> We could add news updates here at some point, i.e. "user x gave 5 stars to burger king," or it could be used by admins (easier) </p>
 <?php
 $db = mysqli_connect('localhost', 'root', '', 'blog_posts');
 $query = "SELECT * FROM blogs ORDER BY Date";

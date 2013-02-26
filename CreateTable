@@ -1,0 +1,21 @@
+CREATE TABLE restaurants(
+Name VARCHAR(50) NOT NULL,
+Street_Number int(11),
+Street_Name VARCHAR(40) NOT NULL,
+Area VARCHAR(40) NOT NULL,
+Phone int(10),
+Has_Bar CHAR(1) NOT NULL DEFAULT 'U',
+Open_Past_10 CHAR(1) NOT NULL DEFAULT 'U',
+Accepts_EagleOne CHAR(1) NOT NULL DEFAULT 'U',
+Price_Rating int(11) NOT NULL DEFAULT 1,
+Avg_Rating INT(11) NOT NULL DEFAULT 1);
+
+CREATE TABLE reviews(
+Restaurant_Name VARCHAR(50) NOT NULL,
+Reviewed_By VARCHAR(30) NOT NULL,
+Num_Stars INT(11) NOT NULL DEFAULT 1,
+Price_Rating int(11) NOT NULL DEFAULT 1,
+Review_Text BLOB NOT NULL);
+
+
+DB name = restaurant_reviews

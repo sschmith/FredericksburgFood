@@ -90,7 +90,7 @@ News
 </h2>
 <!-- LOGIN CODE -->
 <?php
-	$db = mysqli_connect('localhost','root','','testFood');
+	$db = mysqli_connect('localhost','root','','restaurant_reviews');
 	$uname = $_POST['login'];
 	$upass = $_POST['password'];
 

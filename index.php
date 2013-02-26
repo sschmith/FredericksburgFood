@@ -48,17 +48,15 @@ fred<span>food</span>
 </h1>
 <div id="search">
 
-<form action="#">
-
+<form action="submitSearch.php" method="post">
 <div class="searchfield">
-
-
 <input type="text" name="search" id="s">
-
 </div>
 <div class="searchbtn">
-<input type="image" src="images/searchbtn.png" alt="search">
-</div>
+<input type="image" src="images/searchbtn.png" name=searchbutton id=searchbutton alt="search">
+</div><br/><br/><br/>
+<b>Search by: <input type="radio" name="searchClass" value="Name" checked>Name</input>&nbsp;&nbsp;<input type="radio" name="searchClass" value="Style">Style</input>
+&nbsp;&nbsp;<input type="radio" name="searchClass" value="Rating">Rating</input></b>
 
 </form>
 
@@ -72,6 +70,7 @@ fred<span>food</span>
 <div class="ftimg">
 
   <img src="images/img1.jpg" width="204" height="128" alt="img1"></div>
+  <!-- LOGIN HERE -->
   <div class="fttxt">
   <h3>Log In</h3>
   <form action="submitLogin.php" method="post">
@@ -81,6 +80,7 @@ fred<span>food</span>
   <tr><td><input type="submit" value="Log In"/ style="height: 25px; width: 100px" ></tr></td>
   </table>
   </div>
+  
   </div>
 </section>
 <div id="leftcontainer">

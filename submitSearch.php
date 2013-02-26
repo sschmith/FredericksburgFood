@@ -12,11 +12,43 @@ Search Results
 
 </h2>
 <?php
-$db = mysqli_connect('localhost', 'root', '', 'testFood');
+	$db = mysqli_connect('localhost', 'root', '', 'restaurant_reviews');
 
-$searchTerms = $_POST['search'];
-
-$query = "SELECT * FROM blogs ORDER BY Date";
+	$searchTerms = $_POST['search'];
+	$searchClass = $_POST['searchClass'];
+	$query = '';
+	
+	if($searchClass == 'Name')
+	{
+		$query = "SELECT * FROM restaurants WHERE Name='$searchTerms'";
+	}
+	else if($searchClass == 'Area')
+	{
+		$query = "SELECT * FROM restaurants WHERE Area='$searchTerms'";
+	}
+	else
+	{
+		$query = "SELECT * FROM restaurants WHERE Avg_Rating >= $searchTerms";
+	}
+	
+	$result = mysqli_query($db,$query);
+	
+	while($row = mysqli_fetch_array($result))
+	{
+		// Pull data from results
+		$name = $row['Name'];
+		$streetNum = $row['Street_Number'];
+		$streetName = $row['Street_Name'];
+		$area = $row['Area'];
+		$phone = $row['Phone'];
+		
+		
+		echo "<p>_________________________________________________________<br/>";
+		echo "<b>$name</b><br/>";
+		echo "$streetNum $streetName, $area, VA <br/>";
+		echo "Phone: $phone<br/>";
+		echo "_________________________________________________________</p>";
+	}
 ?>
 <div class="wp-pagenavi">
 <span class="current">1</span><a href="/page/2/" title="2">2</a><a href="/page/3/" title="3">3</a><a href="/page/4/" title="4">4</a><a href="/page/5/" title="5">5</a><a href="/page/6/" title="6">6</a><a href="/page/7/" title="7">7</a><a href="/page/8/" title="8">8</a><a href="/page/2/">Next &raquo;</a><span class="extend">...</span><a href="/page/27/" title="Last &raquo;">Last &raquo;</a></div>

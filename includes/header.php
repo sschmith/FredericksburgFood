@@ -52,7 +52,7 @@ fred<span>food</span>
 <div class="searchbtn">
 <input type="image" src="images/searchbtn.png" name=searchbutton id=searchbutton alt="search">
 </div><br/><br/><br/>
-<b>Search by: <input type="radio" name="searchClass" value="Name" checked>Name</input>&nbsp;&nbsp;<input type="radio" name="searchClass" value="Style">Style</input>
+<b>Search by: <input type="radio" name="searchClass" value="Name" checked>Name</input>&nbsp;&nbsp;<input type="radio" name="searchClass" value="Area">Area</input>
 &nbsp;&nbsp;<input type="radio" name="searchClass" value="Rating">Rating</input></b>
 
 </form>

@@ -1,3 +1,12 @@
 Hi Steve,
     What username and password do the login screen accept? It doesn't do anything if I click the button. No error, but it doesn't
 take me anywhere. Just trying to see how navigating the site feels.
+
+Lauren, 
+The usernames/passwords I created are:
+admin/password
+Shaq/bball
+
+But they probably won't work on your compute. The PHP code is trying to connect to a database
+on your computer that doesn't exist (I made a simple database on my computer so I could work on the site),
+so it's breaking the webpage. I'm going to try to fix it before class.

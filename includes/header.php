@@ -33,7 +33,7 @@
 <nav id="sitenav">
 <ul>
 <li class="current"><a href="index.php">Home</a></li>
-<li><a href="contact.php">Make A Post</a></li>
+<li><a href="New_Restaurant.php">Write a Review!</a></li>
 
 </ul>
 

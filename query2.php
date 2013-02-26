@@ -23,7 +23,7 @@ $db = mysqli_connect('localhost', 'root', '', 'restaurant_reviews');
  $phone = $_POST['phone'];
  $content = $_POST['comment'];
 
- $query = "INSERT INTO restaurants (Name, Street_Number, Street_Name, Area, Phone) VALUES ('$authorname', '$RestName', '$StreetNum', '$StreetName', '$local', '$phone')";
+ $query = "INSERT INTO restaurants (Name, Street_Number, Street_Name, Area, Phone) VALUES ('$RestName', '$StreetNum', '$StreetName', '$local', '$phone')";
  $sql = mysqli_query($db, $query);
  $query = "INSERT INTO reviews (Restaurant_Name, Reviewed_By, Review_Text ) VALUES ('$RestName', '$authorname', '$content')";
  $sql = mysqli_query($db, $query);

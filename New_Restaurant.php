@@ -15,7 +15,7 @@
 
   <article class="post">
 
-  <form action="query.php" method="post" class="form">
+  <form action="query2.php" method="post" class="form">
    <p class="textfield">
        <input name="author" id="author" value="" size="22" tabindex="1" type="text">
           <label for="author">

@@ -35,7 +35,7 @@ News
 	$upass = $_POST['password'];
 
 	// Check to see if the username exists
-	$query = "SELECT username,password FROM users WHERE username='$uname'";
+	$query = "SELECT username,password FROM user_info WHERE username='$uname'";
 	$result = mysqli_query($db, $query);
 	$numRows = $result->num_rows;
 	
@@ -54,8 +54,8 @@ News
 		if($upass == $serverside_pass)
 		{
 			echo "<p>Login succeeded.</p>";
-			$query2 = "UPDATE users SET logged_in=1 WHERE username='$uname'";
-			$result2 = mysqli_query($db, $query2);
+			//$query2 = "UPDATE user_info SET logged_in=1 WHERE username='$uname'";
+			//$result2 = mysqli_query($db, $query2);
 		}
 		// Wrong password
 		else

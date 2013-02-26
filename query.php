@@ -2,70 +2,9 @@
 <!doctype html>
 
 <html lang="en-US">
-<head>
-<meta charset="UTF-8" />
-<title>Make A Post</title>
-<link href="style.css" rel="stylesheet" type="text/css">
-<!--[if IE]>
-<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-<!--[if IE 6]>
-<script src="js/belatedPNG.js"></script>
-<script>
-	DD_belatedPNG.fix('*');
-</script>
-<![endif]-->
-<script src="js/jquery-1.4.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/loopedslider.js" type="text/javascript" charset="utf-8"></script>
-<script type="text/javascript" charset="utf-8">
-	$(function(){
-		$('#slider').loopedSlider({
-			autoStart: 6000,
-			restart: 5000
-		});
-		
-	});
-</script> 
-</head>
-
-<body>
-<div id="bodywrap">
-<section id="pagetop">
-<p id="siteinfo">
-Put your Caption of Phone Number // +123 456789
-</p>
-
-<nav id="sitenav">
-<ul>
-<li class="current"><a href="index.php">Home</a></li>
-<li><a href="contact.php">Make A Post</a></li>
-
-</ul>
-
-</nav>
-</section>
-<header id="pageheader">
-<h1>
-silver<span>blog</span>
-</h1>
-<div id="search">
-
-<form action="#">
-
-<div class="searchfield">
-
-
-<input type="text" name="search" id="s">
-
-</div>
-<div class="searchbtn">
-<input type="image" src="images/searchbtn.png" alt="search">
-</div>
-
-</form>
-
-</div>
-</header>
+<?php
+ 			require($DOCUMENT_ROOT . "includes/header.php");
+?>
 <div id="contents">
 <section id="main">
 <div id="leftcontainer">

@@ -15,7 +15,7 @@
 
  <?php
 $db = mysqli_connect('localhost', 'root', '', 'restaurant_reviews');
- $authorname = $_POST['author'];
+ $authorname = $_SESSION['username'];
  $RestName = $_POST['RestName'];
  $StreetNum = $_POST['address1'];
  $StreetName = $_POST['address2'];

@@ -5,55 +5,27 @@
 <?php
  			require($DOCUMENT_ROOT . "includes/header.php");
 ?>
-<div id="contents">
-<section id="main">
 <div id="leftcontainer">
 <section id="normalheader" class="header2">
 
 </section>
-  <h2>Add Your Restaurant!</h2>
+  <h2>
+	<?php
+		if($_SESSION['loggedIn'] == 0)
+		{
+			echo "You need to log in to do that.";
+		}
+	?>
+  </h2>
 
   <article class="post">
 
-  <form action="query2.php" method="post" class="form">
-   <p class="textfield">
-       <input name="author" id="author" value="" size="22" tabindex="1" type="text">
-          <label for="author">
-             <small>Author (required)</small>
-          </label>
-		  <input name="RestName" id="RestName" value="" size="22" tabindex="1" type="text">
-          <label for="Restaurant Name">
-             <small>Restaurant Name (required)</small>
-          </label>
-		  <input name="address1" id="address1" value="" size="22" tabindex="1" type="text">
-          <label for="Address">
-             <small>Street Number</small>
-          </label>
-		  <input name="address2" id="address2" value="" size="22" tabindex="1" type="text">
-          <label for="Address">
-             <small>Street Name</small>
-          </label>
-		  <input name="location" id="location" value="" size="22" tabindex="1" type="text">
-          <label for="location">
-             <small>City</small>
-          </label>
-		  <input name="phone" id="phone" value="" size="22" tabindex="1" type="text">
-          <label for="phone">
-             <small>Phone Number</small>
-          </label>
-   </p>
-   <p>
-       <small><strong>Your Thoughts?</strong> </small>
-   </p>
-   <p class="text-area">
-       <textarea name="comment" id="comment" cols="50" rows="10" tabindex="4"></textarea>
-   </p>
-   <p>
-       <input name="submit" id="submit" tabindex="5" type="image" src="images/submit.png">
-       <input name="comment_post_ID" value="1" type="hidden">
-   </p>
-   <div class="clear"></div>
-</form>
+	<?php 
+		if($_SESSION['loggedIn'] == 1)
+		{
+			include 'includes/reviewForm.php';
+		}
+	?>
   
 <!--Important--><div class="clear"></div>
 </article>

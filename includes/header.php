@@ -1,3 +1,22 @@
+	<?php
+	
+	session_start();
+	
+	if(!isset($_SESSION['loggedIn']))
+	{
+ 		
+ 		$_SESSION['loggedIn'] = 0;
+ 		header("location: login.php");
+ 	}      
+ 	
+	if(!isset($_SESSION['isAdmin']))
+	{
+ 		
+ 		$_SESSION['isAdmin'] = 0;
+ 	}
+ 	
+ 	?>
+
 <head>
 <meta charset="UTF-8" />
 <title>My BLog</title>
@@ -28,7 +47,12 @@
 <div id="bodywrap">
 <section id="pagetop">
 <p id="siteinfo">
-
+	<?php
+		if($_SESSION['loggedIn'] == 1)
+		{
+			echo "Welcome, " . $_SESSION['username'];
+		}
+	?>
 </p>
 <nav id="sitenav">
 <ul>
@@ -59,3 +83,21 @@ fred<span>food</span>
 
 </div>
 </header>
+<div id="contents">
+<section id="main">
+<section id="featured">
+<h2 class="ftheading">Featured</h2>
+<div class="ftwrap">
+<div class="ftimg">
+
+  <img src="images/img1.jpg" width="204" height="128" alt="img1"></div>
+  <!-- LOGIN HERE -->
+  <?php 
+		if($_SESSION['loggedIn'] == 0)
+		{
+			include 'includes\loginBox.php';
+		}
+   ?>
+  
+  </div>
+</section>

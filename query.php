@@ -5,8 +5,6 @@
 <?php
  			require($DOCUMENT_ROOT . "includes/header.php");
 ?>
-<div id="contents">
-<section id="main">
 <div id="leftcontainer">
 <section id="normalheader" class="header2">
 

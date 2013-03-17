@@ -57,8 +57,6 @@ body {background: #fff url(images/bodybg.jpg) repeat-x; font-family:Verdana, Gen
 #main {width:615px; float:left;}
 #sidebar {float:right; width:310px; padding-top:5px;}
 #featured {background:url(images/featureheaderbg.png) 0 0 no-repeat; height:247px; margin-bottom:10px; position:relative; color:#eee;}
-#normalheader {background: url(images/normalheader2.jpg) 0 0 no-repeat; height:150px; margin-bottom:10px;}
-#normalheader.header2 {background:url(images/normalheader.jpg) no-repeat;}
 #featured p {font-size:1.2em; line-height:18px; font-weight:normal;}
 #featured .ftheading {position:absolute; right:0; top:-5px; z-index:800; background:url(images/featuredheading.png) no-repeat; height:117px; width:115px; text-indent:-4000px;}
 #featured h3 {display:block; font:bold 1.8em Arial, Helvetica, sans-serif; color:#fff; margin-bottom:10px;}

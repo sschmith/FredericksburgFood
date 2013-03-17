@@ -52,11 +52,15 @@
 		{
 			echo "Welcome, " . $_SESSION['username'];
 		}
+		else
+		{
+			echo "<a href=\"createAccount.php\">Create an Account</a>";
+		}
 	?>
 </p>
 <nav id="sitenav">
 <ul>
-<li class="current"><a href="index.php">Home</a></li>
+<li><a href="index.php">Home</a></li>
 <li><a href="New_Restaurant.php">Write a Review!</a></li>
 
 </ul>

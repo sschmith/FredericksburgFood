@@ -23,7 +23,7 @@
 	<?php 
 		if($_SESSION['loggedIn'] == 1)
 		{
-			include 'includes/addRestaurantForm.php';
+			include 'includes/newReviewForm.php';
 		}
 	?>
   

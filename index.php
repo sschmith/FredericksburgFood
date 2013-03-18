@@ -2,7 +2,7 @@
 
 <html lang="en-US">
 <?php
- 			require($DOCUMENT_ROOT . "includes/header.php");
+ 			require("includes/header.php");
 ?>
 <div id="leftcontainer">
 <h2 class="mainheading">

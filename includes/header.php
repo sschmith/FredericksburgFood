@@ -61,7 +61,8 @@
 <nav id="sitenav">
 <ul>
 <li><a href="index.php">Home</a></li>
-<li><a href="New_Restaurant.php">Write a Review!</a></li>
+<li><a href="newReview.php">Write a Review</a></li>
+<li><a href="New_Restaurant.php">Add a Restaurant</a></li>
 
 </ul>
 

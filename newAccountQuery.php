@@ -3,7 +3,7 @@
 
 <html lang="en-US">
 <?php
- 			require("includes/header.php");
+ 			require($DOCUMENT_ROOT . "includes/header.php");
 ?>
 <div id="contents">
 <section id="main">
@@ -11,30 +11,31 @@
 <section id="normalheader" class="header2">
 
 </section>
-  <h2>You have added a new restaurant!</h2>
+  <h2>
 
  <?php
-$db = mysqli_connect('localhost', 'root', '', 'restaurant_reviews');
- $authorname = $_SESSION['username'];
- $RestName = $_POST['RestName'];
- $StreetNum = $_POST['address1'];
- $StreetName = $_POST['address2'];
- $local = $_POST['location'];
- $phone = $_POST['phone'];
- $content = $_POST['comment'];
-
- $query = "INSERT INTO restaurants (Name, Street_Number, Street_Name, Area, Phone) VALUES ('$RestName', $StreetNum, '$StreetName', '$local', $phone)";
- $sql = mysqli_query($db, $query);
- 
- if ( false===$sql ) 
- {
-  printf("error: %s\n", mysqli_error($db));
-}
- 
- $query2 = "INSERT INTO reviews (Restaurant_Name, Reviewed_By, Review_Text ) VALUES ('$RestName', '$authorname', '$content')";
- $sql2 = mysqli_query($db, $query2);
+	$db = mysqli_connect('localhost', 'root', '', 'restaurant_reviews');
+	
+	$newUser = $_POST['username'];
+	$newPassword = $_POST['password'];
+	
+	// Check database to see if this username is already being used.
+	$query = "SELECT username FROM user_info WHERE username='$newUser'";
+	$result = mysqli_query($db, $query);
+	$numRows = $result->num_rows;
+	
+	if($numRows != 0)
+	{
+		echo "That username is already taken. Try again.";
+	}
+	else
+	{
+		$insertQuery = "INSERT INTO user_info (username, password, isAdmin) VALUES ('$newUser','$newPassword',0)";
+		$result2 = mysqli_query($db, $insertQuery);
+		echo "Congratulations, you've created an account. You can log in above.";
+	}
  ?>
-   
+ </h2>  
 </div>
 </section>
 <section id="sidebar">

@@ -9,28 +9,29 @@
 News
 
 </h2>
-<p> We could add news updates here at some point, i.e. "user x gave 5 stars to burger king," or it could be used by admins (easier) </p>
+<p>  </p>
 <?php
-/*
-$db = mysqli_connect('localhost', 'root', '', '');
-$query = "SELECT * FROM blogs ORDER BY Date";
+
+$db = mysqli_connect('localhost', 'root', '', 'restaurant_reviews');
+$query = "SELECT username, Review_Text, Name FROM user_info INNER JOIN 
+	reviews ON user_info.user_id = authorid INNER JOIN restaurants ON 
+	restaurants.id = Restaurant_ID";
 $result = mysqli_query($db, $query);
 while($row = mysqli_fetch_array($result))
 {
-$author = $row['Name'];
-$currentdate = $row['Date'];
-$blog = $row['Post_Content'];
+$author = $row['username'];
+$rest = $row['Name'];
+$review = $row['Review_Text'];
 
 echo "<article class=\"post\">";
-echo "<header><h3>$author</h3><p class=\"postinfo\">Published on <time>$currentdate</time> under <a href=\"#\">CSS Templates </a></p></header>";
-echo "<p>$blog</p><footer><span class=\"author\">$author</span><span class=\"permalink\"><a href=\"#permalink\">Read Full</a></span>";
-echo "<span class=\"comments\"><a href=\"#\">0 Comments</a></span></footer></article>";
+
+echo $author . ' said: ' . $review . 'about ' . $rest ;
+
+
 }
-*/
+
 ?>
-<div class="wp-pagenavi">
-<span class="current">1</span><a href="/page/2/" title="2">2</a><a href="/page/3/" title="3">3</a><a href="/page/4/" title="4">4</a><a href="/page/5/" title="5">5</a><a href="/page/6/" title="6">6</a><a href="/page/7/" title="7">7</a><a href="/page/8/" title="8">8</a><a href="/page/2/">Next &raquo;</a><span class="extend">...</span><a href="/page/27/" title="Last &raquo;">Last &raquo;</a></div>
-    <div class="clear"></div>
+
 </div>
 </section>
 <section id="sidebar">

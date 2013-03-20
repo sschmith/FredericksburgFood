@@ -19,7 +19,7 @@
 
 <head>
 <meta charset="UTF-8" />
-<title>My BLog</title>
+<title>FredFood</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 <!--[if IE]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>

@@ -3,10 +3,8 @@
 
 <html lang="en-US">
 <?php
- 			require($DOCUMENT_ROOT . "includes/header.php");
+ 			include("includes/header.php");
 ?>
-<div id="contents">
-<section id="main">
 <div id="leftcontainer">
 <section id="normalheader" class="header2">
 
@@ -19,7 +17,6 @@
 	$newUser = $_POST['username'];
 	$newPassword = $_POST['password'];
 	$newRealname = $_POST['realName'];
-	echo "<p>Real Name: $newRealname</p>";
 	
 	// Check database to see if this username is already being used.
 	$query = "SELECT username FROM user_info WHERE username='$newUser'";
@@ -41,45 +38,6 @@
 </div>
 </section>
 <section id="sidebar">
-<div id="sidebarwrap">
-<h2>From FredFood</h2>
-<p>We appreciate you taking the time to help keep our site up-to-date with all the latest and greatest from the culinary world! Bon Apetite! </p>
-
-<h2>What Else Is New?</h2>
-<ul>
-
-	<li><a href="#">Most Recent Review Posts</a></li>
-
-
-
-</ul>
-<h2>Top 10</h2>
-
-<ul>
-
-	<li><a href="#">10 top rated restaurants on FredFood</a></li>
-
-
-</ul>
-
-
-</div>
-</section>
-
-
-
-<div class="clear"></div>
-</div>
-
-</div>
-<footer id="pagefooter">
-<div id="footerwrap">
-<div class="copyright">
-2010 &copy; Your Copyright Information Goes Here
-</div>
-<div class="credit">
-<a href="http://cssheaven.org" title="Downlaod Free CSS Templates">Website Template</a> by CSSHeaven.org </div>
-</div>
-</footer>
-</body>
-</html>
+<?php
+	include("includes/footer.php");
+	?>

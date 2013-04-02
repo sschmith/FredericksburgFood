@@ -50,7 +50,8 @@
 	<?php
 		if($_SESSION['loggedIn'] == 1)
 		{
-			echo "Welcome, " . $_SESSION['username'];
+			echo "Welcome, " . $_SESSION['real_name'];
+			echo "&nbsp;&nbsp;&nbsp;<a href=\"logout.php\">Log out</a>";
 		}
 		else
 		{
@@ -82,10 +83,9 @@ fred<span>food</span>
 <input type="image" src="images/searchbtn.png" name=searchbutton id=searchbutton alt="search">
 </div><br/><br/><br/>
 <b>Search by: <input type="radio" name="searchClass" value="Name" checked>Name</input>&nbsp;&nbsp;<input type="radio" name="searchClass" value="Area">Area</input>
-&nbsp;&nbsp;<input type="radio" name="searchClass" value="Rating">Rating</input></b>
-
-</form>
-
+&nbsp;&nbsp;<input type="radio" name="searchClass" value="Rating">Rating</input></b></form>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="advancedSearch.php">Advanced search</a>
 </div>
 </header>
 <div id="contents">

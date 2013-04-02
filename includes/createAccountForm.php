@@ -8,6 +8,10 @@
           <label for="Address">
              <small>Password</small>
           </label>
+		  <input name="realName" id="realName" value="" size="22" tabindex="1" type="text">
+          <label for="Address">
+             <small>Real Name</small>
+          </label>
    </p>
    <p>
        <input name="submit" id="submit" tabindex="5" type="image" src="images/submit.png">
